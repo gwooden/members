@@ -1,0 +1,24 @@
+<html>
+<head>
+    <!-- Include css and jquery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://example.local:8082/css/members.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://example.local:8082/corejs/members.js"></script>
+    <script src="http://example.local:8082/corejs/common.js"></script>
+    <script src="http://example.local:8082/form.js"></script>
+</head>
+<body>
+    <div class="memberContent">
+        <form name="search" method="post" index="js-searchForm">
+            <input type="text" name="name" placeholder="Search By Name" autocomplete="off">
+            <br/>
+            <div class="stateDropDown">
+                <select name="state" id="js-stateDropDown" class="form-select form-select-sm" aria-label=".form-select-sm example"></select>
+            </div>
+        </form>
+        <br/>
+        <div id="js-memberContent" class="showtable"></div>
+    </div>
+</body>
+</html>
