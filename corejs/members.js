@@ -12,16 +12,12 @@ function members(){
             {'searchName':req.name,'stateName':req.state,'orderBy':req.orderby},
             function(data){
                 var headerValues = req;
-                var statesFound = [];
                 $.each(JSON.parse(data), function(index, obj) {
                     for(field in req.fieldsDisplay){
                         var value = obj[req.fieldsDisplay[field].toUpperCase()];
                         req[req.fieldsDisplay[field]] = value;
                     }
                     htmlDisplay += commonFuncObj.formatContent(req);
-                    if(statesFound.indexOf(obj[req.stateField]) == -1){
-                        statesFound.push(obj[req.stateField]);
-                    }
                 });
                 
                 for(field in req.fieldsDisplay){
