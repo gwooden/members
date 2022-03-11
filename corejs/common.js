@@ -13,7 +13,7 @@ function commonFunctions(){
         }
     }
 
-    // Format content for display of members
+    // Format content for display
     function formatContent(req){
         var returnContent = '';
         
